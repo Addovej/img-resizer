@@ -3,6 +3,8 @@ from pathlib import Path
 from PIL import Image
 from tqdm import tqdm
 
+Image.MAX_IMAGE_PIXELS = 199756800  # To prevent resizing error of 200MP photos
+
 
 class ImageResizer:
     max_size: int = 1280
